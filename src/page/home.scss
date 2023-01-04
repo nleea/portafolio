@@ -1,0 +1,33 @@
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "navbar navbar navbar"
+        "banner banner banner"
+        "skill skill skill"
+        "project project project"
+        "contact contact contact";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr;
+}
+
+.home_navbar {
+    grid-area: navbar;
+    position: sticky;
+}
+
+.home_banner {
+    grid-area: banner;
+}
+
+.home_skill {
+    grid-area: skill;
+}
+
+.home_project {
+    grid-area: project;
+}
+
+.home_contact {
+    grid-area: contact;
+}

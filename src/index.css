@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  background: linear-gradient(0deg,rgb(54,206,190) -5.91%,rgb(0,118,105) 111.58%);
+}
+
+@font-face {
+  font-family: "Over the Rainbow";
+  src: local("OvertheRainbow"),
+    url(./assets/fonts/over_the_rainbow/OvertheRainbow.ttf) format("truetype");
+}
+
+@keyframes cambiar {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
