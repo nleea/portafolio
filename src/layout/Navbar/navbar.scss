@@ -1,6 +1,7 @@
 .navbar_container {
     &-main {
         width: 100%;
+        z-index: 100;
 
         &_logo {
             padding: 5px;
