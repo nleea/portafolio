@@ -11,6 +11,7 @@ export const Home = () => {
             <div className="home_banner" >
                 <Banner />
             </div>
+            <div className="home_about"></div>
             <div className="home_skill" ></div>
             <div className="home_project" ></div>
             <div className="home_contact" ></div>

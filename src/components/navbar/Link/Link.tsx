@@ -27,7 +27,7 @@ export const Link = styled(LinkComponent)`
     padding: 10px;
     line-height:1;
     display: block;
-    color:#fff;
+    color:black;
     text-decoration: none;
     font-family: ${({ font }) => font && "Over the Rainbow,cursive;"};
     max-width: fit-content;

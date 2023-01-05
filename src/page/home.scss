@@ -4,11 +4,12 @@
     grid-template-areas:
         "navbar navbar navbar"
         "banner banner banner"
+        "about about about"
         "skill skill skill"
         "project project project"
         "contact contact contact";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .home_navbar {
@@ -18,16 +19,25 @@
 
 .home_banner {
     grid-area: banner;
+    height: 100vh;
+}
+
+.home-about {
+    grid-area: about;
+    height: 100vh;
 }
 
 .home_skill {
     grid-area: skill;
+    height: 100vh;
 }
 
 .home_project {
     grid-area: project;
+    height: 100vh;
 }
 
 .home_contact {
     grid-area: contact;
+    height: 100vh;
 }
