@@ -1,10 +1,10 @@
 .banner-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 80%;
-    width: 80%;
+    width: 90%;
     margin: 5% auto;
-    justify-content: space-between;
+
     font-family: "Poppins", sans-serif;
 
     &_presentation {
@@ -43,15 +43,36 @@
                 color: white;
             }
         }
+
+        &_image {
+            width: 100% !important;
+            height: 100%;
+            margin-top: 10px;
+
+            & img {
+                margin-left: 3rem;
+                animation: move-banner 2s ease-in-out infinite alternate;
+                position: relative;
+            }
+        }
     }
+}
 
-    &_image {
-        width: 80%;
 
-        & img {
-            margin-left: 3rem;
-            animation: move-banner 2s ease-in-out infinite alternate;
-            position: relative;
+@media (min-width: 1000px) {
+    .banner-container {
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: "Poppins", sans-serif;
+
+        &_image {
+            width: 80%;
+
+            & img {
+                margin-left: 3rem;
+                animation: move-banner 2s ease-in-out infinite alternate;
+                position: relative;
+            }
         }
     }
 }

@@ -1,12 +1,79 @@
+import { useEffect } from "react";
+
+import Js from "../../assets/images/descarga.png";
+import Boostrap from "../../assets/images/Boostrap.png";
+import Css from "../../assets/images/Css.png";
+import Express from "../../assets/images/Express.png";
+import Git from "../../assets/images/Git.png";
+import Html from "../../assets/images/HTML.png";
+import Jest from "../../assets/images/jest.png";
+import Jquery from "../../assets/images/Jquery.png";
+import Less from "../../assets/images/less.png";
+import MaterialUi from "../../assets/images/MaterialUI.png";
+import NodeJs from "../../assets/images/Nodejs.png";
+import Npm from "../../assets/images/Npm.png";
+import Postgrest from "../../assets/images/postgresql.png";
+import React from "../../assets/images/React.png";
+import Redux from "../../assets/images/Redux.png";
+import Sass from "../../assets/images/Sass.png";
+import Sequalize from "../../assets/images/Sequalize.png";
+import Sql from "../../assets/images/sql.png";
+
+
+import "./skills.scss";
+
 export const Skills = () => {
 
+
+    const MoveSkills = () => {
+        const card = document.querySelector('.card-item') as any;
+        card.addEventListener('mousemove', rotate);
+        card.addEventListener('mouseout', stopRotate)
+
+        function rotate(e: any) {
+            const halfHeight = card.offsetHeight / 2;
+
+            card.style.transform = 'rotateX(' + -(e.offsetX - halfHeight) / 70 + 'deg) rotateY(' + (e.offsetY - halfHeight) / 70 + 'deg) scale3d(1,1,1)';
+        }
+        function stopRotate() {
+            card.style.transform = 'rotate(0)';
+        }
+
+    }
+
+    useEffect(() => {
+        MoveSkills()
+    }, [])
+
+
     return (
-        <div>
-            <div className="skill">
 
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" className="skill-text"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAEc9JREFUeNrtnXmYVMW5h9+q3nt6lp4BRJCRQQSDosElUdxxjSTqVTHmcUOMyHXFYOKCV40XF2I0qGjCFbl6XS+gJuAuXhQTBBcUFcmoMDAoMPtM98z0ek7dPw6NbMP0Oj2h632YAZ7urq5T9Tvf+eqrqq8ESdK5rhIFQirKgBHA2cDRwCCgDPAAtmTL02SEAYSAFqAWWAIsBFYLaAOUu6o2qYJEd28I11QCCAUDgV8C5wDDAD+6w3sLBtAMVAPzgXkosQlQniHrd/vBLgUQqqkEIUApP3AZ8Gtgf8Ce76vV7JYYlhAeA54T0GYC3i4swi4FEFo7CFMppJSHAfcAJwDOfF+ZJiUiwDvArfG4sdJms+EdsrMIdhJAyDL5EsvUTweG5PtKNBnxNTBFIF5TKNOzgyXYTgCW2UeiGA/cB/TNd+01WWEzcD1SzUMJ5Rn8gwhk4h+hmkrcg4tAcQ668/c0+gMzMMUZUkBobeXWFwRA59pBCCEADgdeAPbLd401OaEaOF/A5waCoqr1lgXY0vl+4G505+/JDAfuUlAmUQDI8LpBGB1OgAnAifmuoSbnnA6cjQmhdZVIpQS2oug+WAJw5Lt2mpzjAiYj2QcFCUtwAZZ50BQGBwJjACSCcqy4vg7rFg524FLAL7EmdvTdX3iMBA6QwFlAeb5ro+lx/MAoiTWlKzMsTPOvhx04RWLN52sKk0Ml1mIOTWFSLrFW8mgKE49ED/8KGZt2/gocLYACRwugwNECKHC0AAocLYACRwugwNECKHC0AAocLYACRwugwNECKHC0AAocLYACRwugwNECKHC0AAocLYACRwugwNECKHC0AAocLYACRwugwNECKHC0AAocLYACRwugwNECKHC0AAqcPS71uxCpbXlVgGHkph6JHwCldv2exGuJn55mjxKAENDaZvJldQzT7P79SinKSiQHHeBEZskWSml1ZHuHorHZYHO9wbfr4qzbEKelzcQwwOMW9CmXVFXaqRxoZ68+NirKJV6PQAiSqnu22KMEYJPwZXWMcVc0EAqrrXdYV8TjcPxRLuY93he3q9vDU3aLlBCOKL5ZG+el1zt5f1mY9d8ZtLSZhMIm8fj27xcCHHaBxyMoL5Psu4+dE0a7OfNUD0Or7LicokeEsEcJAKy7JxxRhCPJ2dNIVKGUlTU7HQsshPUI+eizKDPnBFiyPEJ9o9Ft5ykF0ZgiGlO0BUxqauMsWRZm1tNBThjt5toJxfz4QOdWi5Ir9jgB9CRSQkOTyYOzAjzzYgf1jZk5E6YJm+oMnn+5g/c+CHPlRcVMutRHWYnMmTXQo4A0kRKqv40x4YZGHpodyLjzd2TjZoNpD7Vx1c3NbNhoZM1H2RFtAdJASlj9dYwrb2pm+YpIzr4nFlO89FonwQ7Fo/eUUznQlnVLoC1AikgBG+sMbrizJaedn0ApePu9EDdNa6G5xezWsU35enJ+BXsYkZjivkcCvLs03GPfqRQseLOTmf8dJBbPvLxt0QJIASlhybIIcxd09HjQJm7AY08FeX9ZOKu53bQAkkQIK7gzc06QlrYejNRsQ0uryX0zA9Q3Ze9RoJ3AJJECVlXH+Oiz1J/7QkCRV1LiE0gbRKMQbDcJh1VKsQeXSzCgv637835TQAsgSQwT5r/aQVNLanf/3v1sjL/AxynHuunXx4bdDqGwYlOdwev/F2Luwk7qGnY/hBQChg52cPM1JZx5mpdin8jaI0gLIAmEgGC74pOV0ZQ+N2KYg0emlTP6CBd2G5hbOk0ABw13cPxRbs4/s4hb723h/eW7tixFXsH5ZxZxw8QShg2xuiub/of2AZJACGhpM/h+c/LBnhKf5O6byzj2SBdgOXGmaf0YpvV/KeGnhzqZdX8FRx/h2uk7DzrAweN/rODBO/0M38+ekxlDLYAksARgEmhP3vyPGunkmJ+4ug3cGAYMHWznvql+Bg2w7vCSYsk1lxUz//G+nDvWi8edu4kh/QhIko4ORSTJCSaAY3/qotgnk7pjDQMOP8TJpEt8LHgzxM3XlnDSMW5crtzPCGoBJIHAMtupdEZZicQmLVOf1HcImHRJMRefV8RefW0o1TPrArQAkkABdhvYUjhZoXpNjGiMpCdxlLIcviJv9uP9u0P7AEnidgsc9uRH4EuWRdhUn9osXj6WhWkBJIFSlmPm9SQvgG/XxZjzfDuRaPcrk/KJFkASKGU90/tUJP8MMAx4aHaA6TMDtAVMbJKsRvCyhRZAEihljev32zc1l6mjU3H/YwEuvKaRdz+IEI0pSwi9SAlaAEnicsIZJ3lwOlLrvWhMsWhJmF/9ewOXT2ni/eUROkO9RwhaAEmigBNGuxlcmd7AqanFZN7CTsZNbOCCSQ3Me6WTxmZrVi9Xy72SQQsgSUwTBuxl46zTPBnduc2tJm+9F+bXU5oYe3E902a08fWaOKaZHyFoAaSAzQZXXOjjwOGOjMsKhRUrV0W55+E2xl5cz3W3NbPi8yixuOpRIWgBpIBpQuVAO7dcW0ppSXaazjSh9vs4c15o5+wJDUy6qZmPV0YxjJ6xCFoAqaLgrNO8XH95MS5n9rw4paCuweD5lzo45/IGJt/eTPW3MQS5dRa1AFJEAXY7TJ5YwrWXF2e8pWxX5dc1GDzxvGURHnsqSKDdzJk10AJIA6XA6xFMvb6UO6aU4i/NfjMqBWvXx7nlnlYmTG5iVXUMmQNLoAWQJkpZu3yvu7yEJx6sYOSPHDkx1ZGo4pVFIS68upG33sv+UnQtgAxQynLUxp7sYe6svlxzWXFOrAHA6m9iXPm7Jv76RmdWy9UCyAKmCUP2tXP3LWXMf7wvZ5/uxVeUfXOwsc5gyp0tLHo/nLXHgRZAljBNa7//sUe6mP1ABfP+qy/nnOGlLMsWYWOdwU3TWvjnmlhWHEMtgCxjGOArEpx0rJvZD1Sw4Ml+XH1ZMZUD7SktKNkdX30dY/rMAB0dmU81awHkAKUsIXg9giMPczJ9qp/XnunHjN+Xc/ghTlxZGDoufDvEBysiGVsBLYAckhCCzQb7D7Ez8WIfL8/px1MPVTDmaHdKC0x2JNhu8sRz7XR0ZmYFtAB6iMSegL4VknPO8PLcn/vw7KN9GHO0G2eaEcWlH0eoqY1n5BBqAfQwCatQViIZe7KHZx/tw8y7yxmS4mITgMYmg9XfxBAZ9KIWQJ5ICMFfJrn0/CKefbQPPx3lSqmM+JbkVLFY+vXQAsgzifX/hx3s5OFp/pSXnX3yubXCKF0/QAuA9BdrJrKSZiMEbBhwyIFOLjq3KKXyrDyE6a8l75UCkDL9uXDDUCmtrXc4BIjUcwRKaS3qWLw0wndZyuIlJZw+xpNSODkUtnINpqvBXiWAhDf7bU2cRUvCxOOpdYsC2oJmSjtrSotlSp2XSNz46ZdRJv62iXETG7j3kTZCGZjhrfXfsvw8leFhPA6mQdpmrFdsDUs03MY6gyfndvDM/HbCUcXcWX054sfOpJM5KwVr1sWJxpIXzoD+tqR2/CTqWPu9wZ+fCvLC3zrYVGegFDz/1w5GH+HiwnOKMmsHIBpVKSWC2jYhdTrkVQCJyjc1m8x7pZPZzwVZ/U18650//dE2Zv+xgpLi5HbZxuKw8qvUkjgMHWzHbu86Y7gAhLSetXMXdPKX/wlSvSa23fs7Q4rb/9BK/342Tj7Wnf7ePgEfrYzS0pp8AR63wOFIf0tZXgQghGXu24KKNxaHePTJIJ9+ESUS3f4q3lgc5tmXOph0SXG3uXylhM31Bl+sTn5M5HAIBg2wd3kHJRJAL1kW4YG/BPjgk0iXW8S/32xw3dRmZtxVzsnHuREitU5J1P+J59pTsmD+UonXk/6TvMcFILAcl79/GOGh2QE++ChCR2jXFxyNKu59JMCgAXZ+forHEkEXefcNA57833a+WZu8AEp8gkEDbLssUyn4fHWMP80K8No7IVoD3d+Va9bHmfjbJm68qoSLzi3CX2rl+N2dEBL7AuoaTG67r5UPU0xCdehIJ0Xe9HMG9agAhIDNDQa/+88W3lwcpi3YfaPWNxpcd1sz9Y2lnPtzL2XFEiF/yO5tmtAWMHnmxQ4enhNMej8+wKABdgbubd/JZAthmfU772/l1XdCKV3jpnqDqfe2svCtEJMu9jH6CBflZTYcji2PvC31RlmBnLaAybIVER6cFWDpx5GUDq9w2AVHH+HCYU8+D8GO9LgFkAK+XhtPqvMTbKwzmHJXC0+/2MHxR7o59GAnPq+gsdlkxRdRln0SYeVX0ZTHw2NP9lDh39m/SOzVP+/nXhYvDdMZSq3ccETx7tIwH34aoarSzgFDHYz8kZNhQ+z4SyWRqGLdhjifrYrx5T+jVK+JE0wh/UyCfn2twy7MDLaUi1BNZY/uSBcCnp7fwXW3NacVwEgctCClZfbj8dRy7SUoL5MseKofPxm161FGwgpccWMTL76a+TIsIcBuF9i2DCPjcYWRYSKICRf4mHGX34plpEle4gD/9jMvJx/nTuuziYMWwhFFLM3OBzj1BA8HDnN06bEnrMDtN5QyYljmO4GUsrJ/hyOKSDTzzq/wW3MIbneGJ51kfGVpNESxT3DHb8oYvl/mDZsO/fvZuOay4m6dJ9OEA4Y6uO9WP/37ZWk5TxYQAsb/0sehI5OPkXRFXiyAaVo58O69tYy9+vZswzodgt9MLGHUSGdSd6Gp4JTj3Uyf6qdPee8InI4+3MXV44vTXkewLXm7IqXgZ2M83P8ffvbq0zMikBLG/7KICb/ypZRxWwDjfuFlxl3lDOyfX0swYpiDB+7wM3Dv7CSTyqukEw372PRy9q/K7YDE6RBccaGP399YRnFRauNmhTV6OXeslzl/6sOokc68JHcYdZCTWX+o4McHObOWScx22+TSO3v+UrZn2BAHxx3ppq7BZP138bTHtF3Rv5+N2yaXMmVSqXUAUwbjnqpKOycd4yYWU3xTE98pepkLnE7B2ad7eWhaOQePcGQ1k1iPDwO7QkorKPL2kjAz5wT5bFXq4/rtLkxYYdKfjfFw1fhiRh2UvSPYpIRwWPGPjyM8PDvI35eHae/MfjPabDB8PweTryjh7NM9lObg9LBeIwD4YXKoockK8Pz19U6WLA9T12DSGTK79XgdDkGJT1A50M4vTvFw2okeRgxzUOQRGQ+7dlVXKa2TSld8EeW5lztY/I8IdQ1GSrH8XZXr80oO2N/OpeN8nHaih0EDLL8jFzkERaimMg70njEOPzRuJAL1TQYbvo+zYaNBTW2ctbVx6hsNOkMKpwOKfZJ99rZRVWlnnwF2KgfYGdjfRrlfYrPRbSw+W3UNhxUbNhp89XWMxUvDLF8RYXO9QbDdGvvHDbXT3WuzWcEhr1tQWmKdHnrq8W6OOszF8KGOraOOHGYONUSopjII+HLXRJkhhTUdmzhTNxaDuPHDaZ9SWo3osGOt7FG57/Qu6yqt+kZjEAiaNLeaNLYYtLSaBIKKUNgKXoHllHo9grISSblf0rfchr9MUuz74fzgHriGoAjVVNYCg3q+ufZstj09XMC2v7ZBJf7k6wTx9XZACyAH7Loze427leAjCSwBsjzw0vwLEAcWSWAh0JTv2mh6nGbgUwmsBqrzXRtNj7MSqJZAKzAPyyRoCoMY8CTQlpgLeBHLEmgKgy+AxZCYDFJqI/AYkPvjsDX5Jgw8iBKbQCE9VbWJnQXPA4vyXTtNzlkALEQoPFUbLAtgKBMBbcBUtEO4J7MKuBMIsCW8LAF8Q77DBNz29pXAjcDmfNdUk3W+AybbhFitAM9+tcAOsclQTSVCKKmUOA+YAeyd71prssL3wNVY5l95qmq3vrDdiiBPVS1KCVMo5gO/Rj8O9gRWAeOFUAvZofNhF0vCPFW1KKFMMF8HxgF/A1LbcanpDUSAucA4JdQipYS5Y+fDbnaVd9RUYgMUlAFnAb8BRtBLtpRruiQGfAk8ACxUqIANG66qdbt8c7dLG8M1+4JAKKUGAGOA8cDBWMLQYugdxIEW4HOsCN87oDYDylO1YbcfTHpta3hdJQBK4QeGA4cCp2z5uxzw0MtWFu3BGEAIaxLvI+AdYAVQbROiTaFwDa5NqqD/B2FJuLTrH/ojAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTAxLTEwVDE2OjQ3OjQwKzAwOjAwt311QwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0wMS0xMFQxNjo0Nzo0MCswMDowMMYgzf8AAABGdEVYdHNvZnR3YXJlAEltYWdlTWFnaWNrIDYuNy44LTkgMjAxOS0wMi0wMSBRMTYgaHR0cDovL3d3dy5pbWFnZW1hZ2ljay5vcmdBe+LIAAAAGHRFWHRUaHVtYjo6RG9jdW1lbnQ6OlBhZ2VzADGn/7svAAAAGHRFWHRUaHVtYjo6SW1hZ2U6OmhlaWdodAA1MTLA0FBRAAAAF3RFWHRUaHVtYjo6SW1hZ2U6OldpZHRoADUxMhx8A9wAAAAZdEVYdFRodW1iOjpNaW1ldHlwZQBpbWFnZS9wbmc/slZOAAAAF3RFWHRUaHVtYjo6TVRpbWUAMTU3ODY3NDg2MLH6WrwAAAATdEVYdFRodW1iOjpTaXplADE1LjdLQkJfd2OzAAAARnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8uL3VwbG9hZHMvNTYvOFF0WlhQaC8yMTA4L2phdmFzY3JpcHRfaWNvbl8xMzA5MDAucG5nYoXwnAAAAABJRU5ErkJggg==" title="JavaScript" alt="JavaScript" className="skill-img" />JavaScript</a>
+        <div style={{ width: "80%", margin: "auto" }} >
+            <div className="card">
+                <div className="card-item" style={{ height: "500px" }} >
 
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Js} title="JavaScript" alt="JavaScript" className="skill-img" />JavaScript</a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Html} title="HTML" alt="HTML" className="skill-img" />HTML</a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Css} title="CSS" alt="CSS" className="skill-img" />CSS</a>
+                    <a href="https://www.w3schools.com/sql/sql_intro.asp" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Sql} title="SQL" alt="SQL" className="skill-img" />SQL</a>
+                    <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={React} title="React JS" alt="React JS" className="skill-img" />React JS</a>
+                    <a href="https://redux.js.org/" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Redux} title="Redux" alt="Redux" className="skill-img" />Redux</a>
+                    <a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={NodeJs} title="Node JS" alt="Node JS" className="skill-img" />Node JS</a>
+                    <a href="https://expressjs.com" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Express} title="Express" alt="Express" className="skill-img" /> Express</a>
+                    <a href="https://jquery.com/" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Jquery} title="jQuery" alt="jQuery" className="skill-img" />jQuery</a>
+                    <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Sass} title="Sass" alt="Sass" className="skill-img" />Sass</a>
+                    <a href="https://lesscss.org/" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Less} title="Less" alt="Less" className="skill-img" />Less</a>
+                    <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Postgrest} title="PostgreSQL" alt="PostgreSQL" className="skill-img" />PostgreSQL</a>
+                    <a href="https://sequelize.org/" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Sequalize} title="Sequelize" alt="Sequelize" className="skill-img" />Sequelize</a>
+                    <a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Jest} title="Jest" alt="Jest" className="skill-img" />Jest</a>
+                    <a href="https://mui.com/" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={MaterialUi} title="Material UI" alt="Material UI" className="skill-img" />Material UI</a>
+                    <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Boostrap} title="Bootstrap" alt="Bootstrap" className="skill-img" />Bootstrap</a>
+                    <a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Npm} title="npm" alt="npm" className="skill-img" />npm</a>
+                    <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" className="skill-text"><img src={Git} title="Git" alt="Git" className="skill-img" />Git</a>
+
+                </div>
             </div>
         </div>
+
     )
 }
