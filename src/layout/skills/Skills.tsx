@@ -17,7 +17,7 @@ export const Skills = () => {
     }, [])
 
     return (
-        <div style={{ width: "80%", margin: "auto" }} >
+        <div style={{ width: "80%", margin: "auto", height: "90%" }} >
             <h1 className="skill-title" >Skill</h1>
             <div className="card">
                 <Tilt

@@ -9,7 +9,7 @@ import 'swiper/css/effect-fade'
 
 import "./projects.scss";
 
-import { skill } from "../../utils/data/skill";
+import { projects } from "../../utils/data/projects";
 
 export const Project = () => {
     const [width, setWidth] = useState(window.innerWidth);
@@ -22,13 +22,9 @@ export const Project = () => {
     }, []);
 
     return (
-
-
         <div className='projects__global' id='projects' >
             <div className='projects__title title'>Projects</div>
-            {/* <div className='projects__subtitle'>Recent Projects</div> */}
             <div className='projects__cards-container'>
-
                 <Swiper
                     modules={[Navigation, EffectFade]}
                     navigation
@@ -37,13 +33,11 @@ export const Project = () => {
                     loop
                     className='projects__slider'
                 >
-                    {skill.map(p => (
-                        <SwiperSlide className='swiper__slide'><CardProject /></SwiperSlide>
+                    {projects.map((p, index) => (
+                        <SwiperSlide key={index} className='swiper__slide'><CardProject details={p.details} image={p.image} name={p.name} link={p.link} repository={p.repository} /></SwiperSlide>
                     ))}
                 </Swiper>
-
             </div>
         </div>
-
     )
 }
