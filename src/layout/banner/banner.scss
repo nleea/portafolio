@@ -1,11 +1,18 @@
 .banner-container {
     display: flex;
     flex-direction: column;
-    height: 80%;
-    width: 90%;
-    margin: 5% auto;
+    height: 100%;
+    width: 100%;
 
     font-family: "Poppins", sans-serif;
+
+    & .card {
+        display: flex;
+        flex-direction: row;
+        height: 80%;
+        width: 90%;
+        margin: 5% auto;
+    }
 
     &_presentation {
         display: flex;
@@ -57,7 +64,6 @@
         }
     }
 }
-
 
 @media (min-width: 1000px) {
     .banner-container {

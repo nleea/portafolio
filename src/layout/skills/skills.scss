@@ -1,31 +1,31 @@
 .card {
-    width: 80%;
-    perspective: 1000px;
+    width: 100%;
+    height: 80%;
     transform-style: preserve-3d;
+    margin: auto;
+}
+.skill-title {
+    margin: 3% auto;
+    text-align: center;
+    font-size: 3.3rem;
+    font-weight: 600;
 }
 
 .card-item {
-    will-change: transform;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    align-items: center;
-    transition: all 300ms;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
     box-shadow: 0px 10px 16px 0px hsla(0, 0%, 79%, 0.1);
     width: 80%;
     margin: auto;
-
     height: 80%;
-    justify-content: space-around;
     max-width: 1100px;
     padding: 2rem;
     margin: auto;
     position: relative;
-    z-index: 100000;
 
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 
     & a {
         align-items: center;
@@ -42,12 +42,13 @@
         width: 5rem;
         padding: 1rem;
 
-        &:hover {
-            transform: scale(1.3);
+        &:hover img {
+            transform: scale(1.1);
         }
 
         & img {
             width: 3rem;
+            transition: 0.25s;
         }
     }
 }
