@@ -1,7 +1,10 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../context/context";
 import Tilt from "react-parallax-tilt";
 import "./style/cardProjects.scss";
 
 export const CardProject = ({ details, image, name, repository, link }: { image: string, name: string, details: string, repository: string, link: string }) => {
+    const { theme } = useContext(ThemeContext);
 
     return (
         <Tilt
