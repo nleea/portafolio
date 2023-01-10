@@ -59,7 +59,7 @@
 
 @media screen and (min-height: 800px) {
     .home_soft-skill {
-        height: 160vh;
+        height: 180vh;
     }
     .home_project {
         grid-area: project;
@@ -81,7 +81,7 @@
 
 @media screen and (min-width: 400px) {
     .home_soft-skill {
-        height: 140vh;
+        height: 150vh;
     }
 }
 
@@ -123,18 +123,36 @@
 
 @media screen and (min-width: 763px) {
     .home_soft-skill {
-        height: 90vh;
+        height: 120vh;
     }
 }
 
 @media screen and (min-width: 800px) {
     .home_soft-skill {
-        height: 100vh;
+        height: 110vh;
     }
 }
 
 @media screen and (min-width: 900px) {
     .home_soft-skill {
-        height: 90vh;
+        height: 110vh;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .home_soft-skill {
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .home_soft-skill {
+        height: 80vh;
+    }
+}
+
+@media screen and (min-width: 2500px) {
+    .home_soft-skill {
+        height: 70vh;
     }
 }
