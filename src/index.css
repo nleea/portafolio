@@ -5,13 +5,14 @@
 
 body {
   margin: 0;
-
+  scrollbar-width: thin;
+  overflow-x: hidden;
 }
 
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: black #fafafa;
+  scrollbar-color: black var(--dark-color);
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -20,13 +21,13 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: #fafafa;
+  background: var(--dark-color);
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: black;
   border-radius: 20px;
-  border: 3px solid #fafafa;
+  border: 3px solid var(--dark-color);
 }
 
 html {

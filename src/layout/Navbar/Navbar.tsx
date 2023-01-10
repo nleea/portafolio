@@ -41,7 +41,14 @@ export const NavBar = () => {
 
     return (
         <>
-            <div className="navbar_container">
+            <div className="navbar_container" style={{
+                height: navSize,
+                background: navColor,
+                position: fixed ? "fixed" : undefined,
+                zIndex: 99999,
+                transition: ".32s ease-in-out",
+                width:"100%"
+            }} >
                 <div className="navbar_container-main" >
                     <div className="navbar_container-main_logo" >
                         <Link link="Nelson" route="#inicio" font={true} size={50} color={theme} ></Link>

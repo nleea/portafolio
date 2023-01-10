@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
@@ -59,11 +59,17 @@ export const Toggle = () => {
 
     const { changeTheme, theme } = useContext(ThemeContext);
 
+    useEffect(() => {
+        if (theme === 'light-theme') {
+            document.body.style.color ="#111"
+        }
+    }, [theme])
+
 
     return (
         <div className="toggleButton" >
             <FormControlLabel
-                control={<MaterialUISwitch sx={{ m: 1 }} checked={checked} value={checked}  />}
+                control={<MaterialUISwitch sx={{ m: 1 }} checked={checked} value={checked} />}
                 label=""
                 onClick={() => {
                     setChecked((p) => !p);
