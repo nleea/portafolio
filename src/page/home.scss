@@ -61,6 +61,10 @@
     .home_soft-skill {
         height: 160vh;
     }
+    .home_project {
+        grid-area: project;
+        height: 70vh;
+    }
 }
 
 @media screen and (min-height: 880px) {
