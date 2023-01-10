@@ -8,6 +8,7 @@ interface PropsLink {
     className?: any;
     font?: boolean;
     size?: number;
+    color: string;
 }
 
 type Props<Props = {}> = PropsWithChildren<Props>
@@ -22,12 +23,12 @@ const LinkComponent = (props: Props<PropsLink>) => {
 
 export const Link = styled(LinkComponent)`
     padding-top: 1rem;
-    font-size: ${({ size }) => size +"px"}; 
+    font-size: ${({ size }) => size + "px"}; 
     font-weight: 700;
     padding: 10px;
     line-height:1;
     display: block;
-    color:black;
+    color: ${({ color }) => color === "light-theme" ? "black" : "white"};
     text-decoration: none;
     font-family: ${({ font }) => font && "Over the Rainbow,cursive;"};
     max-width: fit-content;
