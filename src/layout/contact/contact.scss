@@ -1,0 +1,22 @@
+.contact {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    & h1 {
+        color: black;
+    }
+
+    & li {
+        list-style: none;
+        margin: 10px;
+    }
+}
+
+.social__content--icon {
+    color: white;
+}

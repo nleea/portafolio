@@ -17,8 +17,8 @@ export const Skills = () => {
     }, [])
 
     return (
-        <div style={{ width: "80%", margin: "auto", height: "90%" }} >
-            <h1 className="skill-title" >Skill</h1>
+        <div id="habilidaes">
+            <h1 className="skill-title" >Hard Skills</h1>
             <div className="card">
                 <Tilt
                     tiltEnable={width > 768 ? true : false}
@@ -32,6 +32,7 @@ export const Skills = () => {
                     {skill.map((skill, index) => <Skill icon={skill.icon} name={skill.name} url={skill.href} key={index} />)}
                 </Tilt>
             </div>
+
         </div>
     )
 }

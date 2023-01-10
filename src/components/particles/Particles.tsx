@@ -1,14 +1,19 @@
-import { useCallback } from "react";
+import { useCallback, useContext } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
+import { ThemeContext } from "../../context/context";
 
 
 export const ParticlesBackgroubd = () => {
+
+
+    const { theme } = useContext(ThemeContext);
+
     const particlesInit = useCallback(async (engine: any) => {
         await loadFull(engine);
     }, []);
 
- 
+
 
     return (
         <Particles id="tsparticles"
@@ -42,10 +47,10 @@ export const ParticlesBackgroubd = () => {
                 },
                 particles: {
                     color: {
-                        value: "#000",
+                        value: theme === "light-theme" ? "#111" : "#fafafa",
                     },
                     links: {
-                        color: "#000",
+                        color: theme === "light-theme" ? "#111" : "#fafafa",
                         distance: 150,
                         enable: true,
                         opacity: 0.5,

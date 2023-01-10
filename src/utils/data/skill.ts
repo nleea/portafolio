@@ -16,6 +16,8 @@ import Redux from "../../assets/images/Redux.png";
 import Sass from "../../assets/images/Sass.png";
 import Sequalize from "../../assets/images/Sequalize.png";
 import Sql from "../../assets/images/sql.png";
+import Py from "../../assets/images/python.webp";
+import Dj from "../../assets/images/django.webp";
 
 interface Iskill {
   href: string;
@@ -114,5 +116,15 @@ export const skill: Iskill[] = <Iskill[]>[
     href: "https://git-scm.com/",
     name: "Git",
     icon: Git,
+  },
+  {
+    href: "https://www.python.org/",
+    name: "Pytohn",
+    icon: Py,
+  },
+  {
+    href: "https://www.djangoproject.com/",
+    name: "Django",
+    icon: Dj,
   },
 ];

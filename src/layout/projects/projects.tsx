@@ -22,7 +22,7 @@ export const Project = () => {
     }, []);
 
     return (
-        <div className='projects__global' id='projects' >
+        <div className='projects__global' id='portafolio' >
             <div className='projects__title title'>Projects</div>
             <div className='projects__cards-container'>
                 <Swiper

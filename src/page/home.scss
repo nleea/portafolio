@@ -1,43 +1,136 @@
+:root {
+    --light-color: #fafafa;
+    --dark-color: #111;
+    --light-text: white;
+    --dark-text: black;
+}
+
 .container {
-    height: 100%;
     display: grid;
     grid-template-areas:
         "navbar navbar navbar"
         "banner banner banner"
-        "about about about"
         "skill skill skill"
+        "soft soft soft"
         "project project project"
         "contact contact contact";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.1fr;
+    background: var(--light-color);
+}
+
+.light-theme {
+    background: var(--light-color);
+}
+
+.dark-theme {
+    background: var(--dark-color);
+    color: whitesmoke;
 }
 
 .home_navbar {
     grid-area: navbar;
-    position: sticky;
 }
 
 .home_banner {
     grid-area: banner;
-    height: 90vh;
-}
-
-.home-about {
-    grid-area: about;
-    height: 90vh;
+    height: 115vh;
 }
 
 .home_skill {
     grid-area: skill;
-    height: 90vh;
+    height: 120vh;
+}
+
+.home_soft-skill {
+    grid-area: soft;
+    height: 210vh;
 }
 
 .home_project {
     grid-area: project;
-    height: 90vh;
+    height: 100vh;
 }
 
 .home_contact {
     grid-area: contact;
-    height: 90vh;
+    height: 10vh;
+}
+
+@media screen and (min-height: 800px) {
+    .home_soft-skill {
+        height: 160vh;
+    }
+}
+
+@media screen and (min-height: 880px) {
+    .home_soft-skill {
+        height: 140vh;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .home_soft-skill {
+        height: 190vh;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .home_soft-skill {
+        height: 140vh;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .home_banner {
+        height: 100vh;
+    }
+
+    .home_skill {
+        height: 90vh;
+    }
+
+    .home_soft-skill {
+        height: 70vh;
+    }
+
+    .home_project {
+        height: 90vh;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .home_soft-skill {
+        height: 130vh;
+    }
+}
+
+@media screen and (min-width: 560px) {
+    .home_soft-skill {
+        height: 125vh;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .home_soft-skill {
+        height: 70vh;
+    }
+}
+
+@media screen and (min-width: 763px) {
+    .home_soft-skill {
+        height: 90vh;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .home_soft-skill {
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .home_soft-skill {
+        height: 90vh;
+    }
 }

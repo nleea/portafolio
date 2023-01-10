@@ -1,5 +1,6 @@
 import Red1 from "../../assets/images/red1.png";
 import Peli1 from "../../assets/images/peli1.png";
+import Portafolio from "../../assets/images/portafolio.png";
 
 interface IProjects {
   image: string;
@@ -26,4 +27,11 @@ export const projects: IProjects[] = <IProjects[]>[
     link: "/",
     repository: "https://github.com/nleea/movie",
   },
+  {
+    image:Portafolio,
+    details:"Proyecto creado con react, portafolio para poder mostrar mis proyecto y a mi como profesional ",
+    name:"Portafolio",
+    link:"/",
+    repository:"https://github.com/nleea/portafolio"
+  }
 ];
