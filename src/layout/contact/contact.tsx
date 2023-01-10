@@ -7,7 +7,7 @@ export const Contact = () => {
     const { theme } = useContext(ThemeContext);
     return (
         <div className="contact" >
-            <h1> Contactame: </h1>
+            <h1  style={{color: theme === "light-theme" ? "#111":"#fafafa"}} > Contactame: </h1>
             <li>
                 <a href="https://www.linkedin.com/in/nelson-de-castro-599402196/" target="_blank" rel="noreferrer noopener external" className="social__content--icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34">
                     <path fill={theme === "light-theme" ? "none" : "#fafafa"} d="M0 0h24v24H0z"></path>
