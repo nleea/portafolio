@@ -59,11 +59,6 @@ export const Toggle = () => {
 
     const { changeTheme, theme } = useContext(ThemeContext);
 
-    useEffect(() => {
-        if (theme === 'light-theme') {
-            document.body.style.color ="#111"
-        }
-    }, [theme])
 
 
     return (
