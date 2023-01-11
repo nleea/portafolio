@@ -58,6 +58,8 @@
     height: 10vh;
 }
 
+
+
 @media screen and (min-height: 800px) {
     .home_soft-skill {
         height: 180vh;
@@ -77,6 +79,12 @@
 @media screen and (min-width: 360px) {
     .home_soft-skill {
         height: 160vh;
+    }
+}
+
+@media (max-height:750px) and (min-width: 360px) {
+    .home_soft-skill {
+        height: 200vh;
     }
 }
 
@@ -135,6 +143,12 @@
 }
 
 @media (min-width: 900px) {
+    .home_soft-skill {
+        height: 60vh;
+    }
+}
+
+@media (min-width: 1000px) {
     .home_soft-skill {
         height: 90vh;
     }

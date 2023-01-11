@@ -40,7 +40,12 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    padding: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+    .swiper__slide {
+        padding: 2rem;
+    }
 }
 
 @media screen and (max-width: 1200px) {
