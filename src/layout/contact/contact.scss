@@ -1,44 +1,69 @@
 .contact {
-    width: 100%;
-    height: 100%;
-    color: white;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+}
+
+.contact-title {
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif !important;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 
-    & h1 {
-        color: black;
-    }
-
-    & li {
-        list-style: none;
-        margin: 10px;
-    }
-}
-
-.social__content--icon {
-    color: white;
-    border-radius: 10px;
-}
-
-.social--svg {
-    border-radius: 10px;
-}
-
-svg {
-    border-radius: 10px;
-    padding: 5px;
-}
-
-@media screen and (max-width:400px) {
-    .contact {
+    &--data {
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
         width: 100%;
-        height: 30vh;
+        & svg {
+            font-size: 3rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .contact {
+        max-width: 50% !important;
+    }
+
+    .icon-container {
+        flex-direction: row ;
+
+        &--data {
+            width: 25%;
+        }
+    }
+}
+
+.redes-container {
+    & h4 {
+        margin-top: 1.5rem;
+        text-align: center;
+        font-family: "Poppins", sans-serif !important;
+    }
+    &--icons {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        & li {
+            margin: 2rem 10px;
+        }
     }
 }

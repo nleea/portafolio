@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import Tilt from "react-parallax-tilt";
 
-import { CardSoft } from "../../components/UI/cardSoft";
-
 import { soft } from "../../utils/data/softSkills";
 
 import Card from '@mui/material/Card';
@@ -27,8 +25,8 @@ export const SoftSkills = () => {
         <div className="soft-skill">
             <h1 className="skill-title" >Soft Skills</h1>
             <div className="card-soft" >
-                {soft.map((s) =>
-                    <Tilt
+                {soft.map((s,index) =>
+                    <Tilt key={index}
                         tiltEnable={width > 768 ? true : false}
                         tiltMaxAngleX={10}
                         tiltMaxAngleY={10}
