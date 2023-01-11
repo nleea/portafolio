@@ -35,139 +35,141 @@
 
 .home_banner {
     grid-area: banner;
-    height: 115vh;
 }
 
 .home_skill {
     grid-area: skill;
-    height: 120vh;
+    margin-top: 3rem;
 }
 
 .home_soft-skill {
     grid-area: soft;
-    height: 210vh;
+    margin-top: 3rem;
 }
 
 .home_project {
     grid-area: project;
-    height: 100vh;
 }
 
 .home_contact {
     grid-area: contact;
-    height: 10vh;
 }
 
 
-
-@media screen and (min-height: 800px) {
+@media (min-width:800px){
     .home_soft-skill {
-        height: 180vh;
-    }
-    .home_project {
-        grid-area: project;
-        height: 70vh;
+        margin-top: 5rem;
     }
 }
 
-@media screen and (min-height: 880px) {
-    .home_soft-skill {
-        height: 175vh;
-    }
-}
+// @media screen and (min-height: 800px) {
+//     .home_soft-skill {
+//         height: 180vh;
+//     }
+//     .home_project {
+//         grid-area: project;
+//         height: 70vh;
+//     }
+// }
 
-@media screen and (min-width: 360px) {
-    .home_soft-skill {
-        height: 160vh;
-    }
-}
+// @media screen and (min-height: 880px) {
+//     .home_soft-skill {
+//         height: 175vh;
+//     }
+// }
 
-@media (max-height:750px) and (min-width: 360px) {
-    .home_soft-skill {
-        height: 200vh;
-    }
-}
+// @media screen and (min-width: 360px) {
+//     .home_soft-skill {
+//         height: 160vh;
+//     }
+// }
 
-@media screen and (min-width: 400px) {
-    .home_soft-skill {
-        height: 150vh;
-    }
-}
+// @media (max-height:750px) and (min-width: 360px) {
+//     .home_soft-skill {
+//         height: 230vh;
+//     }
+// }
 
-@media screen and (min-width: 600px) {
-    .home_banner {
-        height: 100vh;
-    }
+// @media screen and (min-width: 400px) {
+//     .home_soft-skill {
+//         height: 230vh;
+//     }
+// }
 
-    .home_skill {
-        height: 90vh;
-    }
+// @media screen and (min-width: 600px) {
+//     .home_banner {
+//         height: 230vh;
+//     }
 
-    .home_soft-skill {
-        height: 70vh;
-    }
+//     .home_skill {
+//         height: 90vh;
+//     }
 
-    .home_project {
-        height: 90vh;
-    }
-}
+//     .home_soft-skill {
+//         height: 70vh;
+//     }
 
-@media screen and (min-width: 500px) {
-    .home_soft-skill {
-        height: 130vh;
-    }
-}
+//     .home_project {
+//         height: 90vh;
+//     }
+// }
 
-@media screen and (min-width: 560px) {
-    .home_soft-skill {
-        height: 125vh;
-    }
-}
+// @media screen and (min-width: 500px) {
+//     .home_soft-skill {
+//         height: 130vh;
+//     }
+// }
 
-@media screen and (min-width: 760px) {
-    .home_soft-skill {
-        height: 70vh;
-    }
-}
+// @media screen and (min-width: 560px) {
+//     .home_soft-skill {
+//         height: 125vh;
+//     }
+// }
 
-@media screen and (min-width: 763px) {
-    .home_soft-skill {
-        height: 120vh;
-    }
-}
+// @media screen and (min-width: 760px) {
+//     .home_soft-skill {
+//         height: 70vh;
+//     }
+// }
 
-@media screen and (min-width: 800px) {
-    .home_soft-skill {
-        height: 110vh;
-    }
-}
+// @media screen and (min-width: 763px) {
+//     .home_soft-skill {
+//         height: 230vh;
+//     }
+// }
 
-@media (min-width: 900px) {
-    .home_soft-skill {
-        height: 60vh;
-    }
-}
+// @media screen and (min-width: 800px) {
+//     .home_soft-skill {
+//         height: 110vh;
+//     }
+// }
 
-@media (min-width: 1000px) {
-    .home_soft-skill {
-        height: 90vh;
-    }
-}
+// @media (min-width: 900px) {
+//     .home_soft-skill {
+//         height: 60vh;
+//     }
+// }
 
-@media (min-hight: 500px) and (min-width: 1500px) {
-    .home_soft-skill {
-        height: 160vh;
-    }
-}
+// @media (min-width: 1000px) {
+//     .home_soft-skill {
+//         height: 50vh;
+//     }
+// }
 
-@media screen and (min-width: 2000px) {
-    .home_soft-skill {
-        height: 80vh;
-    }
-}
+// @media (min-hight: 500px) and (min-width: 1500px) {
+//     .home_soft-skill {
+//         height: 160vh;
+//     }
+// }
 
-@media screen and (min-width: 2500px) {
-    .home_soft-skill {
-        height: 70vh;
-    }
-}
+// @media screen and (min-width: 2000px) {
+//     .home_soft-skill {
+//         height: 80vh;
+//     }
+// }
+
+// @media screen and (min-width: 2500px) {
+//     .home_soft-skill {
+//         height: 70vh;
+//     }
+// }

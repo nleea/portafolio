@@ -1,22 +1,24 @@
 .soft-skill {
     width: 90%;
+    height: 100%;
     margin: 2rem auto;
 }
 
-.card {
+.card-soft {
+    height: 90%;
     width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    & .soft-text {
-        width: 100%;
-        font-family: "Montserrat", sans-serif;
+    & .card-item_soft {
+        width: 20%;
+        height: 40%;
+        padding: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
     }
-}
-.skill-title {
-    margin: 3% auto;
-    text-align: center;
-    font-size: 3.3rem;
-    font-weight: 600;
 }
