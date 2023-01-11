@@ -17,7 +17,7 @@ export const Contact = () => {
             maxWidth: "90%", height: "90%", margin: "auto",
             background: theme === "light-theme" ? "#fafafa" : "#222",
             color: theme === "light-theme" ? "#111" : "#fafafa",
-        }} className="contact" >
+        }} className="contact"  id="contacto" >
 
             <CardContent>
                 <Typography variant="h3" component="div" className="contact-title" >
